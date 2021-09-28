@@ -1,7 +1,6 @@
 import React from 'react';
 import Box from '@material-ui/core/Box';
 import { makeStyles } from '@material-ui/styles';
-import { ThemeProvider, createTheme } from '@material-ui/core/styles';
 import { Link } from 'react-router-dom';
 import {
   Button,
@@ -21,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'row',
   },
   sectionOne: {
-    backgroundColor: "midnightblue",
+    backgroundColor: 'midnightblue',
     height: '25em',
     color: 'white',
   },
@@ -59,7 +58,7 @@ const useStyles = makeStyles((theme) => ({
   },
   leftSideTop: {
     marginBottom: '0.5em',
-    marginTop: "1em"
+    marginTop: '1em',
   },
   leftSideHeader: {
     fontSize: '2.3em',
@@ -111,7 +110,6 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const JobDetails = () => {
-
   const classes = useStyles();
 
   return (
@@ -124,20 +122,26 @@ const JobDetails = () => {
       <Box className={`${classes.sectionTwo} ${classes.column}`}>
         <Box className={`${classes.innerSectionTwo} ${classes.row}`}>
           <Box className={`${classes.leftSide} ${classes.column}`}>
-            <Divider className={`${classes.divider}`} orientation="horizontal" />
+            <Divider
+              className={`${classes.divider}`}
+              orientation="horizontal"
+            />
             <Box className={`${classes.leftSideTop}`}>
               <Typography className={`${classes.leftSideHeader}`}>
                 Job Description
               </Typography>
             </Box>
             <Box>
-              <Typography sx={{textAlign:"justify"}} className={`${classes.leftSideSentence}`}>
-                We are looking for a detail-oriented truck dispatcher to 
-                dispatch our drivers to customer locations. In this role, 
-                your duties will include communicating with our customers 
-                to record their requirements, planning and adjusting routes, 
-                as well as scheduling drivers to deliver or collect freight, 
-                shipments, and packages.
+              <Typography
+                sx={{ textAlign: 'justify' }}
+                className={`${classes.leftSideSentence}`}
+              >
+                We are looking for a detail-oriented truck dispatcher to
+                dispatch our drivers to customer locations. In this role, your
+                duties will include communicating with our customers to record
+                their requirements, planning and adjusting routes, as well as
+                scheduling drivers to deliver or collect freight, shipments, and
+                packages.
               </Typography>
             </Box>
             <Box className={`${classes.leftSideTop}`}>
@@ -147,13 +151,16 @@ const JobDetails = () => {
             </Box>
             <Box>
               <Typography className={`${classes.leftSideSentence}`}>
-                Scheduling drivers to make freight deliveries or collect shipments and packages.
+                Scheduling drivers to make freight deliveries or collect
+                shipments and packages.
               </Typography>
               <Typography className={`${classes.leftSideSentence}`}>
-                Preparing dispatch documents, as well as generating freight bills and invoices.
+                Preparing dispatch documents, as well as generating freight
+                bills and invoices.
               </Typography>
               <Typography className={`${classes.leftSideSentence}`}>
-                Reviewing drivers’ logs, including dispatched calls and arrival times.
+                Reviewing drivers’ logs, including dispatched calls and arrival
+                times.
               </Typography>
               <Typography className={`${classes.leftSideSentence}`}>
                 Monitoring truck repairs and maintenance schedules.
@@ -161,7 +168,8 @@ const JobDetails = () => {
               <Typography className={`${classes.leftSideSentence}`}>
                 Logging customer shipping schedules and complaints.
               </Typography>
-            </Box><Box className={`${classes.leftSideTop}`}>
+            </Box>
+            <Box className={`${classes.leftSideTop}`}>
               <Typography className={`${classes.leftSideHeader}`}>
                 Requirements
               </Typography>
@@ -171,7 +179,8 @@ const JobDetails = () => {
                 High school diploma or GED.
               </Typography>
               <Typography className={`${classes.leftSideSentence}`}>
-                2-3 years of experience as a truck dispatcher in a similar industry.
+                2-3 years of experience as a truck dispatcher in a similar
+                industry.
               </Typography>
               <Typography className={`${classes.leftSideSentence}`}>
                 Knowledge of applicable transportation regulations and laws.
@@ -180,64 +189,73 @@ const JobDetails = () => {
                 Monitoring truck repairs and maintenance schedules.
               </Typography>
               <Typography className={`${classes.leftSideSentence}`}>
-                Proficiency in office software, including Microsoft Word, Excel, and Outlook Express.
+                Proficiency in office software, including Microsoft Word, Excel,
+                and Outlook Express.
               </Typography>
             </Box>
           </Box>
           <Box className={`${classes.rightSide} ${classes.column}`}>
-            <Divider className={`${classes.divider}`} orientation="horizontal" />
+            <Divider
+              className={`${classes.divider}`}
+              orientation="horizontal"
+            />
             <Typography className={`${classes.formHeader}`}>
               Send us a Mail
             </Typography>
-              <TextField
-                className={`${classes.textField}`}
-                label="Name"
-                variant="outlined"
-                size="small"
-              />
-              <TextField
-                className={`${classes.textField}`}
-                label="Company"
-                variant="outlined"
-                size="small"
-              />
-              <TextField
-                className={`${classes.textField}`}
-                label="Email"
-                variant="outlined"
-                size="small"
-              />
-              <TextField
-                className={`${classes.textField}`}
-                label="Mobile No."
-                variant="outlined"
-                size="small"
-              />
-              <TextField
-                className={`${classes.textField}`}
-                label="Paste Your Resume Here"
-                variant="outlined"
-                minRows="5"
-                multiline
-                size="medium"
-              />
-              <TextField
-                className={`${classes.textField}`}
-                multiline
-                label="Cover Letter"
-                minRows="5"
-                variant="outlined"
-                size="medium"
-              />
-              <TextField
-                className={`${classes.textField}`}
-                label="Message to the Recruiter"
-                variant="outlined"
-                minRows="5"
-                multiline
-                size="medium"
-              />
-            <Button component={Link} to="./thankyou"className={`${classes.formButton}`} variant="contained">
+            <TextField
+              className={`${classes.textField}`}
+              label="Name"
+              variant="outlined"
+              size="small"
+            />
+            <TextField
+              className={`${classes.textField}`}
+              label="Company"
+              variant="outlined"
+              size="small"
+            />
+            <TextField
+              className={`${classes.textField}`}
+              label="Email"
+              variant="outlined"
+              size="small"
+            />
+            <TextField
+              className={`${classes.textField}`}
+              label="Mobile No."
+              variant="outlined"
+              size="small"
+            />
+            <TextField
+              className={`${classes.textField}`}
+              label="Paste Your Resume Here"
+              variant="outlined"
+              minRows="5"
+              multiline
+              size="medium"
+            />
+            <TextField
+              className={`${classes.textField}`}
+              multiline
+              label="Cover Letter"
+              minRows="5"
+              variant="outlined"
+              size="medium"
+            />
+            <TextField
+              className={`${classes.textField}`}
+              label="Message to the Recruiter"
+              variant="outlined"
+              minRows="5"
+              multiline
+              size="medium"
+            />
+            <Button
+              component={Link}
+              to="./thankyou"
+              className={`${classes.formButton}`}
+              variant="contained"
+            >
               Submit Application
             </Button>
           </Box>
@@ -247,4 +265,4 @@ const JobDetails = () => {
   );
 };
 
-export default ContactUs;
+export default JobDetails;
